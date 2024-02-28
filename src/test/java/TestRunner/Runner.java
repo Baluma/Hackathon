@@ -1,43 +1,25 @@
 
 package TestRunner;
 
-import org.junit.runner.RunWith;
- 
-import io.cucumber.junit.Cucumber;
+import io.cucumber.testng.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 
-import io.cucumber.junit.CucumberOptions;
-//import io.cucumber.testng.CucumberOptions;
-//import io.cucumber.testng.AbstractTestNGCucumberTests;
- 
-@RunWith(Cucumber.class)
 
-	@CucumberOptions(features={".//FeatureFile/Smoke.feature"},
 
-	glue= {"StepDefination"},plugin=/* {"pretty","html:Reports/myreports.html",
+@CucumberOptions(features = { "src//test//resources//FeatureFile//Smoke.feature" },
 
-												"rerun:target/rerun.txt",
+		glue = { "StepDefination" }, plugin = { "pretty", "html:reports/myreportss.html",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
+		dryRun = false,
 
-												"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}*/
+		monochrome = false,
 
-	{"pretty", "html:reports/myreportss.html",
+		publish = false
 
-		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
+// tags = "@regression"
 
-	,
+)
+public class Runner extends AbstractTestNGCucumberTests{
 
-	dryRun = false,
-
-	monochrome = false,
-
-	publish = false
-
-	//tags = "@regression"
-
-	)
-public class Runner{
-	
 }
- 
-/*public class Runner extends AbstractTestNGCucumberTests{
 
-}*/
