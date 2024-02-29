@@ -19,7 +19,7 @@ import io.cucumber.java.Scenario;
 public class Hooks {
 	 public static WebDriver driver;
 	 static Properties p;
-	@BeforeAll
+	@Before
     public static void setup() throws IOException, InterruptedException
     {
     	driver=BaseClass.initializeBrowser();
@@ -31,7 +31,7 @@ public class Hooks {
  
 	}
  
-    @AfterAll
+    @After
     public static void tearDown() {
        driver.quit();
     }

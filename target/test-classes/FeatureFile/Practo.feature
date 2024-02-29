@@ -6,11 +6,7 @@ Feature: Practo
     And user click Find doctors on the header section
     And user Enter the location and select the location
     And user search for specialization and select
-    And user choose gender in the filters
-    And user choose patientstories in the filter
-    And user choose experience in the filter
-    And user choose fees and avaliable in the filter
-    And user choose relevance in the filter
+    And user Applying all the filters
     Then user see the result
     And user print top five doctor details in the console
 

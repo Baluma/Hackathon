@@ -40,6 +40,14 @@ public class DoctorSearch {
 	public void user_search_for_specialization_and_select() {
 	    sd.SelectSpecializations();
 	}
+	@When("user Applying all the filters")
+	public void user_applying_all_the_filters() throws InterruptedException {
+		sd.SelectGender();
+		sd.SelectPatient();
+		sd.SelectExperience();
+		sd.SelectallFilters();
+		sd.SelectRelavance();
+	}
 
 	@When("user choose gender in the filters")
 	public void user_choose_gender_in_the_filters() throws InterruptedException {
@@ -57,13 +65,14 @@ public class DoctorSearch {
 	public void user_choose_fees_and_avaliable_in_the_filter() throws InterruptedException {
 	   sd.SelectallFilters();
 	}
-	@Then("user see the result")
-	public void user_see_the_result() throws InterruptedException {
-	   Thread.sleep(1000);
-	}
+	
 	@When("user choose relevance in the filter")
 	public void user_choose_relevance_in_the_filter() throws InterruptedException {
 	   sd.SelectRelavance();
+	}
+	@Then("user see the result")
+	public void user_see_the_result() throws InterruptedException {
+	   Thread.sleep(1000);
 	}
 
 

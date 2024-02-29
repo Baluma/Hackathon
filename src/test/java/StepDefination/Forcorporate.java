@@ -41,6 +41,39 @@ public class Forcorporate {
 	    cc.validateCorporatePage();
 	}
 
+@When("user enter Details Without Providing Name")
+public void user_enter_details_without_providing_name() throws IOException {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+	cc.WithoutName();
+}
+@When("user enter Details Without providing organization Name")
+public void user_enter_details_without_providing_organization_name() throws IOException {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+	cc.WithoutOrgName();
+}
+@When("user enter Details With wrong contact number")
+public void user_enter_details_with_wrong_contact_number() throws IOException {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+	cc.WrongNumber();
+}
+@When("user enter Details With wrong email id")
+public void user_enter_details_with_wrong_email_id() throws IOException {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+	cc.WrongEmailId();
+}
+
+@Then("user enter the Fullvalid Details")
+public void user_enter_the_fullvalid_details() throws IOException {
+    // Write code here that turns the phrase above into concrete actions
+    //throw new io.cucumber.java.PendingException();
+	cc.FullValid();
+}
+
+
 
 	@When("user enter the invalid details in the schedule demo")
 	public void user_enter_the_invalid_details_in_the_schedule_demo() throws IOException {

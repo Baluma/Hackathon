@@ -103,6 +103,93 @@ public void validateCorporatePage() {
 	Assert.assertEquals( title,text,"Directed to correct page");
 	System.out.println("Directed to correct page");
 }
+public void FullValid() throws IOException {
+	String test2 = Excel.getCellData(file, "Input_data", 1, 1);
+	EnterName.sendKeys(test2);
+	String test3 = Excel.getCellData(file, "Input_data", 1, 2);
+	EnterOrganizationName.sendKeys(test3);
+	String test8 = Excel.getCellData(file, "Input_data", 1, 7);
+	ReEntercontactNum.sendKeys(test8);
+	String test9 = Excel.getCellData(file, "Input_data", 1, 8);
+	ReEnterEmailId.sendKeys(test9);
+	String test6 = Excel.getCellData(file, "Input_data", 1, 5);
+	WebElement drop1=driver.findElement(SelectOrgsize);
+    Select orgsize=new Select(drop1);
+    orgsize.selectByVisibleText(test6);
+    String test7 = Excel.getCellData(file, "Input_data", 1, 6);
+    WebElement drop2=driver.findElement(SelectInterestIn);
+    Select interest=new Select(drop2);
+    interest.selectByVisibleText(test7); 
+}
+public void WithoutName() throws IOException {
+	String test3 = Excel.getCellData(file, "Input_data", 1, 2);
+	EnterOrganizationName.sendKeys(test3);
+	String test8 = Excel.getCellData(file, "Input_data", 1, 7);
+	ReEntercontactNum.sendKeys(test8);
+	String test9 = Excel.getCellData(file, "Input_data", 1, 8);
+	ReEnterEmailId.sendKeys(test9);
+	String test6 = Excel.getCellData(file, "Input_data", 1, 5);
+	WebElement drop1=driver.findElement(SelectOrgsize);
+    Select orgsize=new Select(drop1);
+    orgsize.selectByVisibleText(test6);
+    String test7 = Excel.getCellData(file, "Input_data", 1, 6);
+    WebElement drop2=driver.findElement(SelectInterestIn);
+    Select interest=new Select(drop2);
+    interest.selectByVisibleText(test7); 
+}
+public void WithoutOrgName() throws IOException {
+	String test2 = Excel.getCellData(file, "Input_data", 1, 1);
+	EnterName.sendKeys(test2);
+	String test8 = Excel.getCellData(file, "Input_data", 1, 7);
+	ReEntercontactNum.sendKeys(test8);
+	String test9 = Excel.getCellData(file, "Input_data", 1, 8);
+	ReEnterEmailId.sendKeys(test9);
+	String test6 = Excel.getCellData(file, "Input_data", 1, 5);
+	WebElement drop1=driver.findElement(SelectOrgsize);
+    Select orgsize=new Select(drop1);
+    orgsize.selectByVisibleText(test6);
+    String test7 = Excel.getCellData(file, "Input_data", 1, 6);
+    WebElement drop2=driver.findElement(SelectInterestIn);
+    Select interest=new Select(drop2);
+    interest.selectByVisibleText(test7); 
+}
+
+public void WrongNumber() throws IOException {
+	String test2 = Excel.getCellData(file, "Input_data", 1, 1);
+	EnterName.sendKeys(test2);
+	String test3 = Excel.getCellData(file, "Input_data", 1, 2);
+	EnterOrganizationName.sendKeys(test3);
+	String test4 = Excel.getCellData(file, "Input_data", 1, 3);
+	EnterContactNumber.sendKeys(test4);
+	String test9 = Excel.getCellData(file, "Input_data", 1, 8);
+	ReEnterEmailId.sendKeys(test9);
+	String test6 = Excel.getCellData(file, "Input_data", 1, 5);
+	WebElement drop1=driver.findElement(SelectOrgsize);
+    Select orgsize=new Select(drop1);
+    orgsize.selectByVisibleText(test6);
+    String test7 = Excel.getCellData(file, "Input_data", 1, 6);
+    WebElement drop2=driver.findElement(SelectInterestIn);
+    Select interest=new Select(drop2);
+    interest.selectByVisibleText(test7); 
+}
+public void WrongEmailId() throws IOException {
+	String test2 = Excel.getCellData(file, "Input_data", 1, 1);
+	EnterName.sendKeys(test2);
+	String test3 = Excel.getCellData(file, "Input_data", 1, 2);
+	EnterOrganizationName.sendKeys(test3);
+	String test8 = Excel.getCellData(file, "Input_data", 1, 7);
+	ReEntercontactNum.sendKeys(test8);
+	String test5 = Excel.getCellData(file, "Input_data", 1, 4);
+	EnterEmailid.sendKeys(test5);
+	String test6 = Excel.getCellData(file, "Input_data", 1, 5);
+	WebElement drop1=driver.findElement(SelectOrgsize);
+    Select orgsize=new Select(drop1);
+    orgsize.selectByVisibleText(test6);
+    String test7 = Excel.getCellData(file, "Input_data", 1, 6);
+    WebElement drop2=driver.findElement(SelectInterestIn);
+    Select interest=new Select(drop2);
+    interest.selectByVisibleText(test7); 
+}
 
 public void InvalidDetails() throws IOException {
 	String test2 = Excel.getCellData(file, "Input_data", 1, 1);

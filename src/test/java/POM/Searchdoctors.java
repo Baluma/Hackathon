@@ -172,9 +172,10 @@ public class Searchdoctors extends BasePage {
 		//String file = System.getProperty(("user.dir")+"/src/test/resources/testdata/Book3.xlsx");
 		List<WebElement> doc= driver.findElements(doctors);
 		int count=1;
+		System.out.println("Top 5 Doctors:");
 		for(WebElement info:doc) {
 			String str=info.getText();
-			System.out.println("Top 5 Doctors:" + str);
+			System.out.println((count)+". " +str);
 			Excel.setCellData(file, "Search_Doctors", count, 0, str);
 			System.out.println("***************************");
 			count++;

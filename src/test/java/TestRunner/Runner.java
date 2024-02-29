@@ -6,15 +6,15 @@ import io.cucumber.testng.AbstractTestNGCucumberTests;
 
 
 
-@CucumberOptions(features = { "src//test//resources//FeatureFile//Smoke.feature" },
+@CucumberOptions(features = { "src//test//resources//FeatureFile" },
 
 		glue = { "StepDefination" }, plugin = { "pretty", "html:reports/myreportss.html",
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:" },
 		dryRun = false,
 
-		monochrome = false,
+		monochrome = true,
 
-		publish = false
+		publish = true
 
 // tags = "@regression"
 

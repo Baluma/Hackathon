@@ -57,9 +57,10 @@ public class PopularSurgeries extends BasePage {
    public void SurgeriesList() throws IOException {
 	   
    List<WebElement> sur=driver.findElements(ListOfSurgeries);
+   System.out.println("List Of Surgeries");
    for(int i=1;i<=sur.size();i++) {
 	   String h=driver.findElement((By.xpath("(//p[@class='mt-12px AilmentItem-module_itemText__XvCHL'])["+i+"]"))).getText();
-	   System.out.println(h);
+	   System.out.println((i)+". " +h);
 	   Excel.setCellData(file, "popular_surgeries",i , 0, h);
 //       for(WebElement info:sur) {
 //		String str=info.getText();
